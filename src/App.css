@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+:root {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(77, 74, 9);
+  background: linear-gradient(
+    135deg,
+    rgba(110, 107, 14, 1) 0%,
+    rgba(0, 0, 0, 1) 23%,
+    rgba(0, 0, 0, 1) 75%,
+    rgb(53, 52, 5) 100%
+  );
+  background-repeat: no-repeat;
+}
+
+.container {
+  padding-right: 10%;
+  padding-left: 10%;
+  margin: auto;
+}
+
+.form-heading {
+  font-family: "Bebas Neue";
+  font-size: 180px;
+  font-weight: 400;
+  line-height: 251.82px;
+  text-align: left;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.let {
+  background: linear-gradient(
+    144.45deg,
+    #ffffff 39.85%,
+    rgba(255, 255, 255, 0.2) 82.13%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  padding-right: 30px;
+}
+.get {
+  background: linear-gradient(
+    135.83deg,
+    #ffffff 44.77%,
+    rgba(255, 255, 255, 0.634573) 62.54%,
+    rgba(255, 255, 255, 0.2) 86.75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  padding-right: 30px;
+}
+
+.intocuh {
+  background: linear-gradient(
+    125.26deg,
+    #ffffff 28.16%,
+    rgba(255, 255, 255, 0.2) 93.22%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* form */
+.contact-form {
+  margin: auto;
+}
+
+.form-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.form-content-right,
+.form-content-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-group {
+  margin-bottom: 17px;
+  display: flex;
+  align-items: end;
+  min-width: 540px;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.form-group label {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 29.3px;
+  color: #ffffff;
+}
+
+.form-group input {
+  width: 400px;
+  height: 40px;
+  border-radius: 6.13px;
+  box-shadow: 0px 2.12px 2.12px 0px #ffc8034d;
+  background-color: #060404;
+  margin-left: 8px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.44px;
+  text-align: left;
+  color: #ffffffcc;
+  outline: none;
+}
+.dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.dropdown-wrapper .selectItems {
+  width: 400px;
+  height: 40px;
+  border-radius: 6.13px;
+  box-shadow: 0px 2.12px 2.12px 0px #ffc8034d;
+  background-color: #060404;
+  margin-left: 8px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.44px;
+  text-align: left;
+  color: #ffffffcc;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+}
+
+.dropdown-wrapper .selectItems .dropdown-option {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.44px;
+  color: #ffffffcc;
+  background-color: #000;
+  cursor: pointer;
+  border-radius: 6.13px;
+  box-shadow: 0px 2.12px 2.12px 0px #ffc8034d;
+}
+
+.dropdown-wrapper .selectItems:hover .dropdown-option {
+  color: #e9c568;
+  cursor: pointer;
+  background-color: #000;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  transform: rotate(-90deg);
+}
+
+.dropdown-arrow.open {
+  transform: rotate(0deg);
+}
+
+/* Country */
+.dropdown-wrapper .custom-dropdown {
+  max-height: 300px !important;
+  overflow-y: scroll !important;
+}
+
+.checkboxContainer {
+  text-align: center;
+  color: #ffffff;
+  margin-top: 59px;
+}
+
+.checkboxContainer .AgreeTerms {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 29.3px;
+  text-align: left;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+
+/* SubmitButton */
+.submitButton {
+  width: 100%;
+  margin-top: 38px;
+  width: 161px;
+  height: 50px;
+  border-radius: 18.31px;
+  margin: auto;
+  cursor: pointer;
+  background: linear-gradient(180deg, #e9c568 0%, rgba(255, 167, 3, 0.24) 100%);
+  font-family: "Roboto", sans-serif;
+  font-size: 23.3px;
+  font-weight: 500;
+  line-height: 27.31px;
+  text-align: center;
+  margin-bottom: 50px;
+}
