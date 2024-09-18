@@ -163,7 +163,7 @@ function App() {
                     type="tel"
                     {...register("phoneNumber", { required: "Phone number is required" })}
                   />
-                  {errors.phoneNumber && <p>{errors.phoneNumber.message}</p>}
+                  {errors.phoneNumber && <p className='error'>{errors.phoneNumber.message}</p>}
                 </div>
 
 
@@ -238,7 +238,7 @@ function App() {
                       className={`dropdown-arrow ${isCompanySizeOpen ? 'open' : ''}`}
                       color={isCompanySizeOpen ? "#E9C568" : "#FFFFFF"}
                     />
-                    {errors.companySize && <p>{errors.companySize.message}</p>}
+                    {errors.companySize && <p className='error'>{errors.companySize.message}</p>}
                   </div>
                 </div>
 
@@ -279,8 +279,9 @@ function App() {
               className='checkbox'
             />
             <span>Agree to the terms and conditions</span>
+            {errors.agreeTerms && <p className='error'>{errors.agreeTerms.message}</p>}
           </label>
-          {errors.agreeTerms && <p>{errors.agreeTerms.message}</p>}
+
         </div>
         <div style={{
           display: "flex",
