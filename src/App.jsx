@@ -12,7 +12,7 @@ function App() {
 
 
   const { register, handleSubmit, formState: { errors } } = useForm();
-
+  console.log(errors);
   const onSubmit = (data) => {
     console.log(data);
   };
@@ -40,7 +40,6 @@ function App() {
 
   return (
     <div className='form-content container'>
-
       <h1 className='form-heading'>
         <span className='let'>LET’S </span>
         <span className='get'>GET</span>
@@ -60,6 +59,7 @@ function App() {
                 {...register("fullName", { required: "Full Name is required" })}
               />
               {errors.fullName && <p>{errors.fullName.message}</p>}
+              {console.log(errors.fullName)}
             </div>
 
 
@@ -238,9 +238,9 @@ function App() {
           {errors.agreeTerms && <p>{errors.agreeTerms.message}</p>}
         </div>
 
+        <button className='submitButton' type="submit">Send</button>
       </form>
 
-      <button className='submitButton' type="submit">Send</button>
     </div>
   );
 }

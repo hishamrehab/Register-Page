@@ -25,7 +25,7 @@ const CountryOptions = () => {
                 CountryOptionsArray.map((item, index) => (
                     <option key={index} value={item.value} className="dropdown-option">
                         {item.label}
-                        {console.log(item.label)}
+
                     </option>
                 ))
             }

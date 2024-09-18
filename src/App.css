@@ -21,11 +21,11 @@ body {
     rgb(53, 52, 5) 100%
   );
   background-repeat: no-repeat;
+  height: auto;
+  width: 100%;
 }
 
 .container {
-  padding-right: 10%;
-  padding-left: 10%;
   margin: auto;
 }
 
@@ -37,6 +37,9 @@ body {
   text-align: left;
   margin-bottom: 0;
   padding-bottom: 0;
+  padding-top: 130px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .let {
@@ -80,15 +83,18 @@ body {
 /* form */
 .contact-form {
   margin: auto;
+  width: 100%;
 }
 
 .form-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 56px;
+  gap: 60px;
   flex-direction: row;
   flex-wrap: wrap;
+  text-align: center;
+  padding-bottom: 100px;
 }
 .form-content-right,
 .form-content-left {
@@ -103,7 +109,7 @@ body {
   margin-bottom: 17px;
   display: flex;
   align-items: end;
-  min-width: 540px;
+  min-width: 510px;
   justify-content: space-between;
   flex-direction: row;
 }
@@ -173,8 +179,6 @@ body {
 }
 
 .dropdown-wrapper .selectItems:hover .dropdown-option {
-  color: #e9c568;
-  cursor: pointer;
   background-color: #000;
 }
 
@@ -222,11 +226,11 @@ body {
 /* SubmitButton */
 .submitButton {
   width: 100%;
-  margin-top: 38px;
+  margin-top: 75px;
   width: 161px;
   height: 50px;
   border-radius: 18.31px;
-  margin: auto;
+
   cursor: pointer;
   background: linear-gradient(180deg, #e9c568 0%, rgba(255, 167, 3, 0.24) 100%);
   font-family: "Roboto", sans-serif;
