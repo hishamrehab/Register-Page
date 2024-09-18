@@ -2,7 +2,8 @@ import './App.css'
 import { useForm } from "react-hook-form";
 import { IoMdArrowDropdown } from "react-icons/io";
 import React, { useState } from "react";
-import Countryopt from './Countryopt';
+
+
 
 
 function App() {
@@ -11,6 +12,23 @@ function App() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isCompanySizeOpen, setIsCompanySizeOpen] = useState(false);
 
+
+
+  const CountryOptionsArray = [
+    { value: 'egypt', label: 'Egypt' },
+    { value: 'afghanistan', label: 'Afghanistan' },
+    { value: 'aland island', label: 'Aland Island' },
+    { value: 'algeria', label: 'Albania' },
+    { value: 'angola', label: 'Algeria' },
+    { value: 'anguilla', label: 'Algeria' },
+    { value: 'antarctica', label: 'Algeria' },
+    { value: 'argentina', label: 'Algeria' },
+    { value: 'armenia', label: 'Algeria' },
+    { value: 'armenia', label: 'Algeria' },
+    { value: 'armenia', label: 'Algeria' },
+    { value: 'armenia', label: 'Algeria' },
+    { value: 'armenia', label: 'Algeria' },
+  ];
 
   const { register, handleSubmit, formState: { errors } } = useForm();
   console.log(errors);
@@ -39,6 +57,14 @@ function App() {
   };
 
 
+  const CountryJsx = CountryOptionsArray.map((item, index,) => (
+    <option key={index} value={item.value} className="dropdown-option" style={{
+      color: "red !important"
+    }}>
+      {item.label}
+    </option>
+  ))
+
   return (
     <div className='form-content container'>
       <h1 className='form-heading'>
@@ -59,8 +85,8 @@ function App() {
                 type="text"
                 {...register("fullName", { required: "Full Name is required" })}
               />
-              {errors.fullName && <p>{errors.fullName.message}</p>}
-              {console.log(errors.fullName)}
+              {errors.fullName && <p className='error'>{errors.fullName.message}</p>}
+
             </div>
 
 
@@ -97,7 +123,7 @@ function App() {
                 />
               </div>
 
-              {errors.jobTitle && <p>{errors.jobTitle.message}</p>}
+              {errors.jobTitle && <p className='error'> {errors.jobTitle.message}</p>}
             </div>
 
             {/* Email */}
@@ -107,7 +133,7 @@ function App() {
                 type="email"
                 {...register("email", { required: "Email is required" })}
               />
-              {errors.email && <p>{errors.email.message}</p>}
+              {errors.email && <p className='error'>{errors.email.message}</p>}
             </div>
 
             {/* Sector */}
@@ -117,7 +143,7 @@ function App() {
                 type="text"
                 {...register("sector", { required: "Sector is required" })}
               />
-              {errors.sector && <p>{errors.sector.message}</p>}
+              {errors.sector && <p className='error'>{errors.sector.message}</p>}
             </div>
 
           </div>
@@ -144,11 +170,10 @@ function App() {
                   onBlur={() => setIsDropdownOpen(false)}
                   onFocus={() => setIsDropdownOpen(true)}
                   className=' selectItems '
-
                 >
-                  <option value="" disabled selected hidden>
-                  </option>
-                  <Countryopt />
+                  <option value="" disabled selected hidden></option>
+                  {CountryJsx}
+
                 </select>
 
 
@@ -157,7 +182,7 @@ function App() {
                   color={isCountryDropdownOpen ? "#E9C568" : "#FFFFFF"}
                 />
               </div>
-              {errors.country && <p>{errors.country.message}</p>}
+              {errors.country && <p className='error'>{errors.country.message}</p>}
             </div>
 
 
@@ -185,7 +210,7 @@ function App() {
                 />
 
               </div>
-              {errors.servicesType && <p>{errors.servicesType.message}</p>}
+              {errors.servicesType && <p className='error'>{errors.servicesType.message}</p>}
             </div>
 
 
