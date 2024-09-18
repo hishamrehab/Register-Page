@@ -2,12 +2,10 @@ import './App.css'
 import { useForm } from "react-hook-form";
 import { IoMdArrowDropdown } from "react-icons/io";
 import React, { useState } from "react";
-import CountryOptions from './countryOptions';
-
+import Countryopt from './Countryopt';
 
 
 function App() {
-
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
@@ -150,7 +148,7 @@ function App() {
                 >
                   <option value="" disabled selected hidden>
                   </option>
-                  <CountryOptions />
+                  <Countryopt />
                 </select>
 
 

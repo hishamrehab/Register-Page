@@ -1,4 +1,3 @@
-import React from 'react';
 import "./App.css"
 
 const CountryOptionsArray = [
@@ -16,23 +15,19 @@ const CountryOptionsArray = [
     { value: 'armenia', label: 'Algeria' },
     { value: 'armenia', label: 'Algeria' },
 ];
-const CountryOptions = () => {
+const Countryopt = () => {
     return (
-
         <div>
             {
                 CountryOptionsArray.map((item, index) => (
                     <option key={index} value={item.value} className="dropdown-option">
                         {item.label}
-
                     </option>
                 ))
             }
 
         </div>
+    )
+}
 
-
-    );
-};
-
-export default CountryOptions;
+export default Countryopt
