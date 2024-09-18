@@ -1,5 +1,6 @@
 import React from 'react';
 import "./App.css"
+
 const CountryOptionsArray = [
     { value: 'egypt', label: 'Egypt' },
     { value: 'afghanistan', label: 'Afghanistan' },
@@ -30,7 +31,7 @@ const CountryOptions = () => {
 
         </div>
 
-        // </div>
+
     );
 };
 
