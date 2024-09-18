@@ -17,10 +17,8 @@ const CountryOptionsArray = [
 ];
 const CountryOptions = () => {
     return (
-        // <div
-        // style={{ height: '100px', overflowY: 'scroll' }}>
-        <>
 
+        <div>
             {
                 CountryOptionsArray.map((item, index) => (
                     <option key={index} value={item.value} className="dropdown-option">
@@ -30,7 +28,7 @@ const CountryOptions = () => {
                 ))
             }
 
-        </>
+        </div>
 
         // </div>
     );
